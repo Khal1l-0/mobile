@@ -151,7 +151,7 @@ ul{
     border-radius: 15px 15px 0 0;
 }
 .calendar_date{
-    font-size: 22px;
+    font-size: 20px;
 }
 .calendar_btn{
     width: 36px;
@@ -175,7 +175,7 @@ ul{
     transform: rotate(-90deg);
 }
 .calendar_week{
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
     top: -15px;
     background: #fff;
@@ -189,11 +189,15 @@ ul{
 }
 
 .calendar_week-item{
+    width: 50px;
     padding: 20px 5px 5px;
     border-radius: 10px;
     transition: 0.7s all;
+    text-align: center;
 }
-
+.calendar_week-item:last-child{
+  display: none;
+}
 .calendar_week-day{
     font-size: 18px;
     font-weight: 400;
@@ -201,7 +205,7 @@ ul{
 }
 .calendar_week-number{
     font-size: 18px;
-    padding: 7px 12px;
+    padding: 7px;
     border-radius: 10px;
     transition: 0.7s all;
     color: #6f7072;
