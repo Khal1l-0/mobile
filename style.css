@@ -29,7 +29,7 @@ ul{
     position: relative;
     z-index: 3;
     transition: 0.7s all;
-    
+    overflow: hidden;
 }
 .container{
     max-width: 354px;
@@ -56,8 +56,6 @@ ul{
     margin: 20px 0;
     transition: 0.7s all;
     transform: translateY(-150%);
-    /* display: none; */
-    
 }
 .line{
     height: 70px;
@@ -73,16 +71,6 @@ ul{
     align-items: center;
     justify-content: center;
 }
-/* .box_img{
-    width: 50px;
-    height: 50px;
-    background: #ffffff63;
-    padding: 10px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-} */
 .box img{
     width: 55px;
     background: #ffffff63;
@@ -121,23 +109,33 @@ ul{
     color: var(--green-);
     border-radius: 12px;
 }
-.info.active{
-    flex-direction: column;
+
+
+.back_link{
+    width: 100%;
+    display: block;
+    background: #fff;
+    padding: 15px;
+    font-size: 22px;
+    color: #57C2B2;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-top: 20px;
+    transform: translateY(-380%);
+    transition: 0.7s all;
+    
 }
+
 .info.active + .profile_info,
-.info.active ~ .tabs{
+.info.active ~ .tabs,
+.info.active ~ .back_link{
     transform: translateY(0);
-}
-.info.active ~ .calendar{
-    transform: translateY(20px);
 }
 .calendar{
     
     margin-top: 20px;
     transition: 0.7s all;
-    transform: translateY(-90%);
     width: 100%;
-    /* background: #fff; */
     border-radius: 15px;
 }
 .calendar_box{
@@ -161,9 +159,6 @@ ul{
     border-radius: 10px;
     outline: none;
     padding: 7px;
-    /* display: flex;
-    justify-content: center; */
-    /* align-content: center; */
 }
 .calendar_btn img{
     width: 100%;
@@ -219,4 +214,7 @@ ul{
 .calendar_week-item.active > .calendar_week-number{
     color: #fff;
     background: #ffffff63;
+}
+.calendar + .back_link{
+    transform: translateY(0);
 }

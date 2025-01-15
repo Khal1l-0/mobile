@@ -1,7 +1,5 @@
-let item = document.querySelector('.info')
+let item = document.getElementById('info')
 let text = document.querySelectorAll('.text')
-let day = document.querySelectorAll('.calendar_week-item')
-
 
 item.addEventListener('click', ()=>{
     item.classList.toggle('active')
@@ -17,12 +15,3 @@ text.forEach((e)=>{
     
 })
 
-day.forEach((e)=>{
-    e.addEventListener(('click'), ()=>{
-        day.forEach((i)=>{
-            i.classList.remove('active')
-        })
-        e.classList.add('active')  
-    })
-    
-})

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <section class="profile">
+
+        <div class="container">
+            <div class="calendar">
+                <div class="calendar_box">
+                    <button class="calendar_btn prev"><img src="img/arrow.svg" alt=""></button>
+                    <h4 class="calendar_date">Jan, 2025</h4>
+                    <button class="calendar_btn next"><img src="img/arrow.svg" alt=""></button>
+                </div>
+                <ul class="calendar_week">
+                    <li class="calendar_week-item">
+                        <h5 class="calendar_week-day">Пн</h5>
+                        <p class="calendar_week-number">13</p>
+                    </li>
+                    <li class="calendar_week-item">
+                        <h5 class="calendar_week-day">Вт</h5>
+                        <p class="calendar_week-number">14</p>
+                    </li>
+                    <li class="calendar_week-item active">
+                        <h5 class="calendar_week-day">Ср</h5>
+                        <p class="calendar_week-number">15</p>
+                    </li>
+                    <li class="calendar_week-item ">
+                        <h5 class="calendar_week-day">Чт</h5>
+                        <p class="calendar_week-number">16</p>
+                    </li>
+                    <li class="calendar_week-item">
+                        <h5 class="calendar_week-day">Пт</h5>
+                        <p class="calendar_week-number">17</p>
+                    </li>
+                    <li class="calendar_week-item">
+                        <h5 class="calendar_week-day">Сб</h5>
+                        <p class="calendar_week-number">18</p>
+                    </li>
+                    <li class="calendar_week-item">
+                        <h5 class="calendar_week-day">S</h5>
+                        <p class="calendar_week-number">19</p>
+                    </li>
+                </ul>
+            </div>
+            <a href="index.html" class="back_link">Назад</a>
+
+        </div>
+    </section>
+    <script>
+        let dayweek = document.querySelectorAll('.calendar_week-item')
+
+        dayweek.forEach((e) => {
+            e.addEventListener(('click'), () => {
+                dayweek.forEach((i) => {
+                    i.classList.remove('active')
+                })
+                e.classList.add('active')
+            })
+
+        })
+    </script>
+</body>
+
+</html>
