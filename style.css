@@ -37,6 +37,8 @@ ul{
     margin: 0 auto;
     padding: 0;
     text-align: center;
+    overflow: hidden;
+    
 }
 .profile_img{
     width: 100px;
@@ -215,6 +217,22 @@ ul{
     color: #fff;
     background: #ffffff63;
 }
-.calendar + .back_link{
+.calendar ~ .back_link{
     transform: translateY(0);
+}
+
+.lesson_time{
+    width: 150%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.lesson_time-item{
+    padding: 10px 30px;
+    background: #fff;
+    border-radius: 10px;
+}
+.lesson_time-item.active{
+    background: #57C2B2;
+    color: #fff;
 }
