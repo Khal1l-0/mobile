@@ -7,7 +7,9 @@
     <title>Profile</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,6 +19,7 @@
     <section class="profile">
 
         <div class="container">
+            <a href="/" class="back_link profile_link">Профиль</a>
             <div class="calendar">
                 <div class="calendar_box">
                     <button class="calendar_btn prev"><img src="img/arrow.svg" alt=""></button>
@@ -61,13 +64,25 @@
                 <li class="lesson_time-item">14:00</li>
                 <li class="lesson_time-item">15:00</li>
             </ul>
-            <a href="/" class="back_link">Назад</a>
+            <div class="attedence">
+                <div class="attedence_box">
+                    <img src="img/group-icon.svg" alt="" class="group_icon">
+                    <h4 class="group_name">H12</h4>
+                    <button class="lesson-status active">Active</button>
+                </div>
+                <a href="#" class="btn_list">Отметить</a>
+            </div>
 
         </div>
     </section>
     <script>
         let dayweek = document.querySelectorAll('.calendar_week-item')
+        let btn = document.querySelector('.lesson-status')
 
+        btn.addEventListener('click', () => {
+            btn.classList.remove('active')
+            btn.classList.add('canceled')
+        })
         dayweek.forEach((e) => {
             e.addEventListener(('click'), () => {
                 dayweek.forEach((i) => {

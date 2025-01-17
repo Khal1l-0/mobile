@@ -1,26 +1,31 @@
-:root{
+:root {
     --green-: #57C2B2;
 }
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: 'Comfortaa';
     font-weight: 400;
 }
-ul{
+
+ul {
     list-style: none;
 }
-.profile{
+
+.profile {
     height: 100vh;
     background: url(img/bkg.jpg) no-repeat center/cover;
     background-attachment: fixed;
     padding-top: 25px;
     overflow: hidden;
 }
-.info{
+
+.info {
     background: #fff;
     width: 100%;
     padding: 35px 0;
@@ -31,26 +36,32 @@ ul{
     transition: 0.7s all;
     overflow: hidden;
 }
-.container{
+
+.container {
     max-width: 354px;
     width: 100%;
     margin: 0 auto;
     padding: 0;
     text-align: center;
     overflow: hidden;
-    
+
 }
-.profile_img{
+
+.profile_img {
     width: 100px;
     border-radius: 50%;
 }
-.name{
+
+.name {
     margin: 20px 0 10px;
 }
-.profile_info{
+
+.profile_info {
     width: 100%;
     padding: 15px 20px;
     background: var(--green-);
+    box-shadow: 0px 4px 10px rgba(87, 194, 178, 0.4), 
+            0px 2px 5px rgba(0, 0, 0, 0.15);
     border-radius: 15px;
     display: flex;
     justify-content: space-between;
@@ -59,7 +70,8 @@ ul{
     transition: 0.7s all;
     transform: translateY(-150%);
 }
-.line{
+
+.line {
     height: 70px;
     width: 1px;
     background: #fff;
@@ -67,28 +79,33 @@ ul{
     border-radius: 2px;
     opacity: 0.3;
 }
-.box{
+
+.box {
     display: flex;
     gap: 10px;
     align-items: center;
     justify-content: center;
 }
-.box img{
+
+.box img {
     width: 55px;
     background: #ffffff63;
     padding: 10px;
     border-radius: 10px;
 }
-.title{
+
+.title {
     font-size: 15px;
     color: #fff;
     margin-bottom: 10px;
 }
-.number{
+
+.number {
     font-size: 25px;
     color: #fff;
 }
-.tabs{
+
+.tabs {
     width: 100%;
     display: flex;
     transform: translateY(-400%);
@@ -99,48 +116,52 @@ ul{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
     transition: 0.7s all;
     /* display: none; */
-    
+
 }
-.text{
+
+.text {
     color: gray;
     padding: 15px 25px;
     transition: 0.7s all;
 }
-.text.active{
+
+.text.active {
     background: #eaecfa;
     color: var(--green-);
     border-radius: 12px;
 }
 
 
-.back_link{
+.back_link {
     width: 100%;
     display: block;
     background: #fff;
     padding: 15px;
     font-size: 22px;
-    color: #57C2B2;
+    color: #000;
     text-decoration: none;
     border-radius: 15px;
     margin-top: 20px;
     transform: translateY(-380%);
     transition: 0.7s all;
-    
+
 }
 
-.info.active + .profile_info,
-.info.active ~ .tabs,
-.info.active ~ .back_link{
+.info.active+.profile_info,
+.info.active~.tabs,
+.info.active~.back_link {
     transform: translateY(0);
 }
-.calendar{
-    
+
+.calendar {
+
     margin-top: 20px;
     transition: 0.7s all;
     width: 100%;
     border-radius: 15px;
 }
-.calendar_box{
+
+.calendar_box {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -150,10 +171,12 @@ ul{
     padding: 20px 20px 35px;
     border-radius: 15px 15px 0 0;
 }
-.calendar_date{
+
+.calendar_date {
     font-size: 20px;
 }
-.calendar_btn{
+
+.calendar_btn {
     width: 36px;
     height: 36px;
     background: #fff;
@@ -162,16 +185,20 @@ ul{
     outline: none;
     padding: 7px;
 }
-.calendar_btn img{
+
+.calendar_btn img {
     width: 100%;
 }
-.calendar_btn.prev{
+
+.calendar_btn.prev {
     transform: rotate(90deg);
 }
-.calendar_btn.next{
+
+.calendar_btn.next {
     transform: rotate(-90deg);
 }
-.calendar_week{
+
+.calendar_week {
     /* overflow: hidden; */
     position: relative;
     top: -15px;
@@ -182,57 +209,142 @@ ul{
     justify-content: space-between;
     align-items: center;
     border-radius: 15px;
-    
+
 }
 
-.calendar_week-item{
+.calendar_week-item {
     width: 50px;
     padding: 20px 5px 5px;
     border-radius: 10px;
     transition: 0.7s all;
     text-align: center;
 }
-.calendar_week-item:last-child{
-  display: none;
+
+.calendar_week-item:last-child {
+    display: none;
 }
-.calendar_week-day{
+
+.calendar_week-day {
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 15px;
 }
-.calendar_week-number{
+
+.calendar_week-number {
     font-size: 18px;
     padding: 7px;
     border-radius: 10px;
     transition: 0.7s all;
     color: #6f7072;
 }
-.calendar_week-item.active{
+
+.calendar_week-item.active {
     background: #57C2B2;
+    box-shadow: 0px 4px 10px rgba(87, 194, 178, 0.4), 
+            0px 2px 5px rgba(0, 0, 0, 0.15);
+    /* background-color: #2196F3;
+    box-shadow: 0px 4px 12px rgba(33, 150, 243, 0.4); */
+    /* background-color: #4CAF50; */
+    /* box-shadow: 0px 4px 12px rgba(76, 175, 80, 0.4); */
+
 }
-.calendar_week-item.active > .calendar_week-day{
+
+.calendar_week-item.active>.calendar_week-day {
     color: #fff;
 }
-.calendar_week-item.active > .calendar_week-number{
+
+.calendar_week-item.active>.calendar_week-number {
     color: #fff;
     background: #ffffff63;
 }
-.calendar ~ .back_link{
+
+.back_link.profile_link {
     transform: translateY(0);
 }
 
-.lesson_time{
+.lesson_time {
     width: 150%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.lesson_time-item{
+
+.lesson_time-item {
     padding: 10px 30px;
     background: #fff;
     border-radius: 10px;
 }
-.lesson_time-item.active{
+
+.lesson_time-item.active {
     background: #57C2B2;
+    box-shadow: 0px 4px 10px rgba(87, 194, 178, 0.4), 
+            0px 2px 5px rgba(0, 0, 0, 0.15);
     color: #fff;
+}
+
+.attedence {
+    margin-top: 20px;
+    padding: 20px 15px 10px;
+    background: #fff;
+    border-radius: 25px;
+}
+
+.attedence_box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.group_icon {
+    width: 54px;
+    height: 54px;
+}
+
+.btn_list {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    background-color: #2196F3;
+    box-shadow: 0px 4px 12px rgba(33, 150, 243, 0.4);    
+    text-decoration: none;
+    color: #fff;
+    border-radius: 15px;
+    padding: 20px 0;
+}
+
+.group_name {
+    font-weight: 400;
+    font-size: 35px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Общий стиль кнопки */
+.lesson-status {
+    font-family: 'Comfortaa';
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.lesson-status.active {
+    background-color: #4CAF50;
+    box-shadow: 0px 4px 12px rgba(76, 175, 80, 0.4);
+}
+.lesson-status.completed {
+    background-color: #2196F3;
+    box-shadow: 0px 4px 12px rgba(33, 150, 243, 0.4);
+}
+
+.lesson-status.canceled {
+    background-color: #E53935;
+    box-shadow: 0px 4px 12px rgba(229, 57, 53, 0.4);
 }
