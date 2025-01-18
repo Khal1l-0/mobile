@@ -1,3 +1,4 @@
+@import url('font/stylesheet.css');
 :root {
     --green-: #57c2b2;
     --orange-: #f46b3f;
@@ -62,9 +63,13 @@ ul {
 }
 
 .name {
-    margin: 20px 0 10px;
+    margin: 20px 0 5px;
+    font-size: 20px;
 }
-
+.username{
+    font-size: 16px;
+    color: #6B7280;
+}
 .profile_info {
     width: 100%;
     padding: 15px 20px;
@@ -150,7 +155,7 @@ ul {
     text-decoration: none;
     border-radius: 15px;
     margin-top: 20px;
-    transform: translateY(-380%);
+    transform: translateY(-210%);
     transition: 0.7s all;
 }
 
@@ -373,6 +378,7 @@ ul {
     border-radius: 15px 15px 0 0;
     gap: 10px;
     overflow: scroll;
+    border: 1px solid var(--green-);
 }
 .list-box_menu::-webkit-scrollbar {
     display: none; /* Chrome, Safari */
@@ -416,7 +422,8 @@ ul {
     width: 56px;
     height: 32px;
     font-size: 18px;
-    background: var(--green-);
+    /* background: var(--green-); */
+    background: var(--red-);
     outline: none;
     border: none;
     color: #fff;
